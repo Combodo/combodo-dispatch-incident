@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+  <classes>
+    <class id="Incident" _delta="must_exist">
+      <fields>
+        <field id="status" xsi:type="AttributeEnum" _detla="must_exit">
+          <values _delta="redefine">
+            <value>new</value>
+            <value>dispatched</value>
+            <value>assigned</value>
+            <value>pending</value>
+            <value>redispatched</value>
+            <value>escalated_tto</value>
+            <value>escalated_ttr</value>
+            <value>resolved</value>
+            <value>closed</value>
+          </values>
+        </field>
+        <field id="tto" xsi:type="AttributeStopWatch" _delta="must_exist">
+          <states>
+            <state id="dispatched" _delta="define"/>
+          </states>
+        </field>
+        <field id="ttr" xsi:type="AttributeStopWatch" _delta="must_exist">
+          <states>
+            <state id="dispatched" _delta="define"/>
+            <state id="redispatched" _delta="define"/>
+          </states>
+        </field>
+      </fields>
+      <lifecycle>
+        <stimuli>
+          <stimulus id="ev_dispatch" xsi:type="StimulusUserAction" _delta="define"/>
+        </stimuli>
+        <states>
+          <state id="new" _delta="must_exist">
+            <transitions _delta="redefine">
+              <transition>
+                <stimulus>ev_assign</stimulus>
+                <target>assigned</target>
+                <actions>
+                  <action>
+                    <verb>SetAssignedDate</verb>
+                  </action>
+                </actions>
+              </transition>
+             <transition>
+                <stimulus>ev_dispatch</stimulus>
+                <target>dispatched</target>
+                <actions/>
+              </transition>
+              <transition>
+                <stimulus>ev_timeout</stimulus>
+                <target>escalated_tto</target>
+                <actions/>
+              </transition>
+              <transition>
+                <stimulus>ev_autoresolve</stimulus>
+                <target>resolved</target>
+                <actions>
+                  <action>
+                    <verb>SetResolveDate</verb>
+                  </action>
+                  <action>
+                    <verb>resolveChilds</verb>
+                  </action>
+                </actions>
+              </transition>
+            </transitions>
+          </state>
+          <state id="assigned" _delta="must_exist">
+            <transitions _delta="redefine">
+              <transition>
+                <stimulus>ev_pending</stimulus>
+                <target>pending</target>
+                <actions>
+                  <action>
+                    <verb>SetLastPendingDate</verb>
+                  </action>
+                </actions>
+              </transition>
+              <transition>
+                <stimulus>ev_resolve</stimulus>
+                <target>resolved</target>
+                <actions>
+                  <action>
+                    <verb>SetResolveDate</verb>
+                  </action>
+                  <action>
+                    <verb>resolveChilds</verb>
+                  </action>
+                </actions>
+              </transition>
+              <transition>
+                <stimulus>ev_reassign</stimulus>
+                <target>assigned</target>
+                <actions/>
+              </transition>
+              <transition>
+                <stimulus>ev_timeout</stimulus>
+                <target>escalated_ttr</target>
+                <actions/>
+              </transition>
+              <transition>
+                <stimulus>ev_autoresolve</stimulus>
+                <target>resolved</target>
+                <actions>
+                  <action>
+                    <verb>SetResolveDate</verb>
+                  </action>
+                  <action>
+                    <verb>resolveChilds</verb>
+                  </action>
+                </actions>
+              </transition>
+              <transition>
+                <stimulus>ev_dispatch</stimulus>
+                <target>redispatched</target>
+                <actions>
+                  <action>
+                    <verb>ResetAgent</verb>
+                  </action>
+                </actions>
+              </transition>
+            </transitions>
+          </state>
+          <state id="dispatched" _delta="define">
+            <flags>
+              <attribute id="ref">
+                <read_only/>
+              </attribute>
+              <attribute id="org_id">
+                <mandatory/>
+              </attribute>
+              <attribute id="caller_id">
+                <mandatory/>
+              </attribute>
+              <attribute id="team_id">
+                <mandatory/>
+                <must_prompt/>
+              </attribute>
+              <attribute id="agent_id">
+                <hidden/>
+              </attribute>
+              <attribute id="priority">
+                <read_only/>
+              </attribute>
+              <attribute id="start_date">
+                <read_only/>
+              </attribute>
+              <attribute id="last_update">
+                <read_only/>
+              </attribute>
+              <attribute id="close_date">
+                <hidden/>
+              </attribute>
+              <attribute id="escalation_flag">
+                <hidden/>
+              </attribute>
+              <attribute id="escalation_reason">
+                <hidden/>
+              </attribute>
+              <attribute id="assignment_date">
+                <hidden/>
+              </attribute>
+              <attribute id="resolution_date">
+                <hidden/>
+              </attribute>
+              <attribute id="last_pending_date">
+                <hidden/>
+              </attribute>
+              <attribute id="time_spent">
+                <hidden/>
+              </attribute>
+              <attribute id="resolution_code">
+                <hidden/>
+              </attribute>
+              <attribute id="solution">
+                <hidden/>
+              </attribute>
+              <attribute id="pending_reason">
+                <hidden/>
+              </attribute>
+              <attribute id="user_satisfaction">
+                <hidden/>
+              </attribute>
+              <attribute id="user_comment">
+                <hidden/>
+              </attribute>
+              <attribute id="tto_escalation_deadline">
+                <read_only/>
+              </attribute>
+              <attribute id="sla_tto_passed">
+                <hidden/>
+              </attribute>
+              <attribute id="sla_tto_over">
+                <hidden/>
+              </attribute>
+              <attribute id="sla_ttr_passed">
+                <hidden/>
+              </attribute>
+              <attribute id="ttr_escalation_deadline">
+                <hidden/>
+              </attribute>
+              <attribute id="sla_ttr_over">
+                <hidden/>
+              </attribute>
+            </flags>
+            <transitions>
+              <transition>
+                <stimulus>ev_assign</stimulus>
+                <target>assigned</target>
+                <actions>
+                  <action>
+                    <verb>SetAssignedDate</verb>
+                  </action>
+                </actions>
+              </transition>
+              <transition>
+                <stimulus>ev_timeout</stimulus>
+                <target>escalated_tto</target>
+                <actions/>
+              </transition>
+            </transitions>
+          </state>
+          <state id="redispatched" _delta="define">
+            <flags>
+              <attribute id="ref">
+                <read_only/>
+              </attribute>
+              <attribute id="org_id">
+                <mandatory/>
+              </attribute>
+              <attribute id="team_id">
+                <mandatory/>
+                <must_prompt/>
+              </attribute>
+              <attribute id="agent_id">
+                <hidden/>
+              </attribute>
+              <attribute id="priority">
+                <read_only/>
+              </attribute>
+              <attribute id="start_date">
+                <read_only/>
+              </attribute>
+              <attribute id="last_update">
+                <read_only/>
+              </attribute>
+              <attribute id="close_date">
+                <hidden/>
+              </attribute>
+              <attribute id="assignment_date">
+                <read_only/>
+              </attribute>
+              <attribute id="resolution_date">
+                <hidden/>
+              </attribute>
+              <attribute id="last_pending_date">
+                <hidden/>
+              </attribute>
+              <attribute id="time_spent">
+                <hidden/>
+              </attribute>
+              <attribute id="resolution_code">
+                <hidden/>
+              </attribute>
+              <attribute id="solution">
+                <hidden/>
+              </attribute>
+              <attribute id="pending_reason">
+                <hidden/>
+              </attribute>
+              <attribute id="user_satisfaction">
+                <hidden/>
+              </attribute>
+              <attribute id="user_comment">
+                <hidden/>
+              </attribute>
+              <attribute id="tto_escalation_deadline">
+                <hidden/>
+              </attribute>
+              <attribute id="sla_tto_passed">
+                <read_only/>
+              </attribute>
+              <attribute id="sla_tto_over">
+                <read_only/>
+              </attribute>
+              <attribute id="sla_ttr_passed">
+                <hidden/>
+              </attribute>
+              <attribute id="ttr_escalation_deadline">
+                <read_only/>
+              </attribute>
+              <attribute id="sla_ttr_over">
+                <hidden/>
+              </attribute>
+            </flags>
+            <transitions>
+              <transition>
+                <stimulus>ev_assign</stimulus>
+                <target>assigned</target>
+                <actions/>
+              </transition>
+              <transition>
+                <stimulus>ev_timeout</stimulus>
+                <target>escalated_ttr</target>
+                <actions/>
+              </transition>
+              <transition>
+                <stimulus>ev_autoresolve</stimulus>
+                <target>resolved</target>
+                <actions>
+                  <action>
+                    <verb>SetResolveDate</verb>
+                  </action>
+                  <action>
+                    <verb>resolveChilds</verb>
+                  </action>
+                </actions>
+              </transition>
+            </transitions>
+          </state>
+        </states>
+      </lifecycle>
+      <methods>
+        <method id="ResetAgent" _delta="define">
+          <static>false</static>
+          <access>public</access>
+          <type>LifecycleAction</type>
+          <code><![CDATA[	public function ResetAgent($sStimulusCode)
+	{
+		$this->Set('agent_id', 0);
+		return true;
+	}]]></code>
+        </method>
+      </methods>
+    </class>
+  </classes>
+  <menus>
+  </menus>
+  <profiles>
+  </profiles>
+</itop_design>
