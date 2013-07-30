@@ -15,7 +15,8 @@ SetupWebPage::AddModule(
 		// Setup
 		//
 		'dependencies' => array(
-			'itop-incident-mgmt-itil/2.0.0'
+			'itop-incident-mgmt-itil/2.0.0',
+			'itop-profiles-itil/1.0.0'
 		),
 		'mandatory' => false,
 		'visible' => true,
