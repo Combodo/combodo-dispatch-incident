@@ -333,79 +333,8 @@
               </transition>
             </transitions>
           </state>
-          <state id="escalated_ttr" _delta="redefine">
-            <flags>
-              <attribute id="ref">
-                <read_only/>
-              </attribute>
-              <attribute id="org_id">
-                <mandatory/>
-              </attribute>
-              <attribute id="team_id">
-                <mandatory/>
-              </attribute>
-              <attribute id="agent_id">
-                <mandatory/>
-              </attribute>
-              <attribute id="priority">
-                <read_only/>
-              </attribute>
-              <attribute id="start_date">
-                <read_only/>
-              </attribute>
-              <attribute id="last_update">
-                <read_only/>
-              </attribute>
-              <attribute id="close_date">
-                <hidden/>
-              </attribute>
-              <attribute id="assignment_date">
-                <read_only/>
-              </attribute>
-              <attribute id="resolution_date">
-                <hidden/>
-              </attribute>
-              <attribute id="last_pending_date">
-                <hidden/>
-              </attribute>
-              <attribute id="time_spent">
-                <hidden/>
-              </attribute>
-              <attribute id="resolution_code">
-                <hidden/>
-              </attribute>
-              <attribute id="solution">
-                <hidden/>
-              </attribute>
-              <attribute id="pending_reason">
-                <hidden/>
-              </attribute>
-              <attribute id="user_satisfaction">
-                <hidden/>
-              </attribute>
-              <attribute id="user_comment">
-                <hidden/>
-              </attribute>
-              <attribute id="tto_escalation_deadline">
-                <hidden/>
-              </attribute>
-              <attribute id="sla_tto_passed">
-                <read_only/>
-              </attribute>
-              <attribute id="sla_tto_over">
-                <read_only/>
-              </attribute>
-              <attribute id="sla_ttr_passed">
-                <hidden/>
-              </attribute>
-              <attribute id="ttr_escalation_deadline">
-                <read_only/>
-              </attribute>
-              <attribute id="sla_ttr_over">
-                <hidden/>
-              </attribute>
-            </flags>
-            <transitions>
+          <state id="escalated_ttr">
+            <transitions _delta="redefine">
               <transition>
                 <stimulus>ev_pending</stimulus>
                 <target>pending</target>
@@ -603,7 +532,7 @@
     <menu id="Incident:IncidentsDispatchedToMyTeams" xsi:type="OQLMenuNode" _delta="define">
       <rank>0.5</rank>
       <parent>Incident:Shortcuts</parent>
-      <oql><![CDATA[SELECT Incident JOIN Team ON Incident.team_id = Team.id JOIN lnkPersonToTeam AS L ON L.team_id = Team.id WHERE L.person_id = :current_contact_id AND Incident.status IN ("dispatched", "redispatched")]]></oql>
+      <oql><![CDATA[SELECT Incident JOIN Team ON Incident.team_id = Team.id JOIN lnkPersonToTeam AS L ON L.team_id = Team.id WHERE L.person_id = :current_contact_id AND Incident.status NOT IN ("resolved", "closed")]]></oql>
       <do_search/>
       <auto_reload>fast</auto_reload>
     </menu>
