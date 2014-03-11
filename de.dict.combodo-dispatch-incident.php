@@ -8,10 +8,10 @@
 
 Dict::Add('DE DE', 'German', 'Deutsch', array(
 	// Dictionary entries go here
-	'Class:UserRequest/Attribute:status/Value:dispatched' => 'Zugewiesen',
-	'Class:UserRequest/Attribute:status/Value:redispatched' => 'Neu zugewiesen',
-	'Class:UserRequest/Stimulus:ev_dispatch' => 'An ein Team zugewiesen',
+	'Class:Incident/Attribute:status/Value:dispatched' => 'Zugewiesen',
+	'Class:Incident/Attribute:status/Value:redispatched' => 'Neu zugewiesen',
+	'Class:Incident/Stimulus:ev_dispatch' => 'An ein Team zugewiesen',
 	// Menu entry
-	'Menu:UserRequest:RequestsDispatchedToMyTeams' => 'Incidents die meinem Team zugewiesen sind',
-	'Menu:UserRequest:RequestsDispatchedToMyTeams+' => 'Offene Incidents, die meinem Team zugewiesen sind',
+	'Menu:Incident:IncidentsDispatchedToMyTeams' => 'Incidents die meinem Team zugewiesen sind',
+	'Menu:Incident:IncidentsDispatchedToMyTeams+' => 'Offene Incidents, die meinem Team zugewiesen sind',
 ));
