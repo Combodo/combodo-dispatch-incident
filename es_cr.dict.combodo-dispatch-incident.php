@@ -5,7 +5,8 @@
  * @copyright   Copyright (C) 2013 Combodo SARL
  * @license     http://opensource.org/licenses/AGPL-3.0
  */
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+
+Dict::Add('ES CR', 'Spanish', 'Espa�ol, Castellano', array(
 	// Dictionary entries go here
 	'Class:Incident/Attribute:status/Value:dispatched' => 'Despachado',
 	'Class:Incident/Attribute:status/Value:redispatched' => 'Redespachado',
