@@ -14,3 +14,16 @@ Dict::Add('JA JP', 'Japanese', '日本語', array(
 	'Menu:Incident:IncidentsDispatchedToMyTeams' => 'Incidents dispatched to my teams~~',	
 	'Menu:Incident:IncidentsDispatchedToMyTeams+' => 'Open incidents dispatched to one of my teams~~',	
 ));
+
+//
+// Class: Incident
+//
+
+Dict::Add('JA JP', 'Japanese', '日本語', array(
+	'Class:Incident/Attribute:status' => 'Status~~',
+	'Class:Incident/Attribute:status+' => '~~',
+	'Class:Incident/Attribute:tto' => 'Tto~~',
+	'Class:Incident/Attribute:tto+' => '~~',
+	'Class:Incident/Attribute:ttr' => 'Ttr~~',
+	'Class:Incident/Attribute:ttr+' => '~~',
+));

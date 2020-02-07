@@ -16,3 +16,16 @@ Dict::Add('RU RU', 'Russian', 'Русский', array(
 	'Menu:Incident:IncidentsDispatchedToMyTeams' => 'Направленные в мои команды',	
 	'Menu:Incident:IncidentsDispatchedToMyTeams+' => 'Открытые инциденты, направленные в мои команды',	
 ));
+
+//
+// Class: Incident
+//
+
+Dict::Add('RU RU', 'Russian', 'Русский', array(
+	'Class:Incident/Attribute:status' => 'Status~~',
+	'Class:Incident/Attribute:status+' => '~~',
+	'Class:Incident/Attribute:tto' => 'Tto~~',
+	'Class:Incident/Attribute:tto+' => '~~',
+	'Class:Incident/Attribute:ttr' => 'Ttr~~',
+	'Class:Incident/Attribute:ttr+' => '~~',
+));

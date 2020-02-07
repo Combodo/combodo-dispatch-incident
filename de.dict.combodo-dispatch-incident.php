@@ -8,3 +8,16 @@ Dict::Add('DE DE', 'German', 'Deutsch', array(
 	'Menu:Incident:IncidentsDispatchedToMyTeams' => 'An mein Team zugewiesene Incidents',	
 	'Menu:Incident:IncidentsDispatchedToMyTeams+' => 'Offene Incidents, die an mein Team zugewiesen wurden',	
 ));
+
+//
+// Class: Incident
+//
+
+Dict::Add('DE DE', 'German', 'Deutsch', array(
+	'Class:Incident/Attribute:status' => 'Status~~',
+	'Class:Incident/Attribute:status+' => '~~',
+	'Class:Incident/Attribute:tto' => 'Tto~~',
+	'Class:Incident/Attribute:tto+' => '~~',
+	'Class:Incident/Attribute:ttr' => 'Ttr~~',
+	'Class:Incident/Attribute:ttr+' => '~~',
+));
