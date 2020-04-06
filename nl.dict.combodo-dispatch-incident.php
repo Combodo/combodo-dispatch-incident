@@ -15,3 +15,16 @@ Dict::Add('NL NL', 'Dutch', 'Nederlands', array(
 	'Menu:Incident:IncidentsDispatchedToMyTeams' => 'Incidenten dispatched naar mijn teams',	
 	'Menu:Incident:IncidentsDispatchedToMyTeams+' => 'Open incidenten dispatched naar een van mijn teams',	
 ));
+
+//
+// Class: Incident
+//
+
+Dict::Add('NL NL', 'Dutch', 'Nederlands', array(
+	'Class:Incident/Attribute:status' => 'Status~~',
+	'Class:Incident/Attribute:status+' => '~~',
+	'Class:Incident/Attribute:tto' => 'Tto~~',
+	'Class:Incident/Attribute:tto+' => '~~',
+	'Class:Incident/Attribute:ttr' => 'Ttr~~',
+	'Class:Incident/Attribute:ttr+' => '~~',
+));

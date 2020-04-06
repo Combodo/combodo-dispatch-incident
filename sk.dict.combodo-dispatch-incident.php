@@ -5,7 +5,7 @@
  * @copyright   Copyright (C) 2013 Combodo SARL
  * @license     http://opensource.org/licenses/AGPL-3.0
  */
-Dict::Add('CS CZ', 'Czech', 'Čeština', array(
+Dict::Add('SK SK', 'Slovak', 'Slovenčina', array(
 	// Dictionary entries go here
 	'Class:Incident/Attribute:status/Value:dispatched' => 'Dispatched~~',
 	'Class:Incident/Attribute:status/Value:redispatched' => 'Redispatched~~',
@@ -19,7 +19,7 @@ Dict::Add('CS CZ', 'Czech', 'Čeština', array(
 // Class: Incident
 //
 
-Dict::Add('CS CZ', 'Czech', 'Čeština', array(
+Dict::Add('SK SK', 'Slovak', 'Slovenčina', array(
 	'Class:Incident/Attribute:status' => 'Status~~',
 	'Class:Incident/Attribute:status+' => '~~',
 	'Class:Incident/Attribute:tto' => 'Tto~~',
