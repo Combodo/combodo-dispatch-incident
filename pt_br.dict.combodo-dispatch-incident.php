@@ -7,12 +7,12 @@
  */
 Dict::Add('PT BR', 'Brazilian', 'Brazilian', array(
 	// Dictionary entries go here
-	'Class:Incident/Attribute:status/Value:dispatched' => 'Dispatched~~',
-	'Class:Incident/Attribute:status/Value:redispatched' => 'Redispatched~~',
-	'Class:Incident/Stimulus:ev_dispatch' => 'Dispatch to a team~~',
+	'Class:Incident/Attribute:status/Value:dispatched' => 'Encaminhado',
+	'Class:Incident/Attribute:status/Value:redispatched' => 'Reencaminhado',
+	'Class:Incident/Stimulus:ev_dispatch' => 'Encaminhar para uma equipe',
 	// Menu entry
-	'Menu:Incident:IncidentsDispatchedToMyTeams' => 'Incidents dispatched to my teams~~',	
-	'Menu:Incident:IncidentsDispatchedToMyTeams+' => 'Open incidents dispatched to one of my teams~~',	
+	'Menu:Incident:IncidentsDispatchedToMyTeams' => 'Incidentes encaminhados para minhas equipes',	
+	'Menu:Incident:IncidentsDispatchedToMyTeams+' => 'Incidentes abertos para alguma de minhas equipes',	
 ));
 
 //
@@ -20,10 +20,10 @@ Dict::Add('PT BR', 'Brazilian', 'Brazilian', array(
 //
 
 Dict::Add('PT BR', 'Brazilian', 'Brazilian', array(
-	'Class:Incident/Attribute:status' => 'Status~~',
-	'Class:Incident/Attribute:status+' => '~~',
-	'Class:Incident/Attribute:tto' => 'Tto~~',
-	'Class:Incident/Attribute:tto+' => '~~',
-	'Class:Incident/Attribute:ttr' => 'Ttr~~',
-	'Class:Incident/Attribute:ttr+' => '~~',
+	'Class:Incident/Attribute:status' => 'Estado',
+	'Class:Incident/Attribute:status+' => '',
+	'Class:Incident/Attribute:tto' => 'TTO',
+	'Class:Incident/Attribute:tto+' => 'Tempo de atribuição',
+	'Class:Incident/Attribute:ttr' => 'TTR',
+	'Class:Incident/Attribute:ttr+' => 'Tempo de resolução',
 ));
