@@ -14,16 +14,3 @@ Dict::Add('PT BR', 'Brazilian', 'Brazilian', array(
 	'Menu:Incident:IncidentsDispatchedToMyTeams' => 'Incidentes encaminhados para minhas equipes',	
 	'Menu:Incident:IncidentsDispatchedToMyTeams+' => 'Incidentes abertos para alguma de minhas equipes',	
 ));
-
-//
-// Class: Incident
-//
-
-Dict::Add('PT BR', 'Brazilian', 'Brazilian', array(
-	'Class:Incident/Attribute:status' => 'Estado',
-	'Class:Incident/Attribute:status+' => '',
-	'Class:Incident/Attribute:tto' => 'TTO',
-	'Class:Incident/Attribute:tto+' => 'Tempo de atribuição',
-	'Class:Incident/Attribute:ttr' => 'TTR',
-	'Class:Incident/Attribute:ttr+' => 'Tempo de resolução',
-));

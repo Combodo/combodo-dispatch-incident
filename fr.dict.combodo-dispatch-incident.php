@@ -8,16 +8,3 @@ Dict::Add('FR FR', 'French', 'Français', array(
 	'Menu:Incident:IncidentsDispatchedToMyTeams' => 'Incidents affectés à mes équipes',	
 	'Menu:Incident:IncidentsDispatchedToMyTeams+' => 'Incidents ouverts affectés à une de mes équipes',	
 ));
-
-//
-// Class: Incident
-//
-
-Dict::Add('FR FR', 'French', 'Français', array(
-	'Class:Incident/Attribute:status' => 'Statut',
-	'Class:Incident/Attribute:status+' => '~~',
-	'Class:Incident/Attribute:tto' => 'GTI',
-	'Class:Incident/Attribute:tto+' => '~~',
-	'Class:Incident/Attribute:ttr' => 'GTR',
-	'Class:Incident/Attribute:ttr+' => '~~',
-));
