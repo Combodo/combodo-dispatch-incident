@@ -5,7 +5,7 @@
 
 SetupWebPage::AddModule(
 	__FILE__, // Path to the current file, all other file names are relative to the directory containing this file
-	'combodo-dispatch-incident/1.1.8',
+	'combodo-dispatch-incident/1.1.9',
 	array(
 		// Identification
 		//
