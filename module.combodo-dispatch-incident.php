@@ -5,7 +5,7 @@
 
 SetupWebPage::AddModule(
 	__FILE__, // Path to the current file, all other file names are relative to the directory containing this file
-	'combodo-dispatch-incident/1.1.9',
+	'combodo-dispatch-incident/1.2.0',
 	array(
 		// Identification
 		//
@@ -15,8 +15,8 @@ SetupWebPage::AddModule(
 		// Setup
 		//
 		'dependencies' => array(
-			'itop-incident-mgmt-itil/2.1.0',
-			'itop-profiles-itil/2.1.0'
+			'itop-incident-mgmt-itil/3.0.0',
+			'itop-profiles-itil/3.0.0'
 		),
 		'mandatory' => false,
 		'visible' => true,
