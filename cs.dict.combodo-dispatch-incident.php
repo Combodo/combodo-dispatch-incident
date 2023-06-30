@@ -7,10 +7,10 @@
  */
 Dict::Add('CS CZ', 'Czech', 'Čeština', array(
 	// Dictionary entries go here
-	'Class:Incident/Attribute:status/Value:dispatched' => 'Dispatched~~',
-	'Class:Incident/Attribute:status/Value:redispatched' => 'Redispatched~~',
-	'Class:Incident/Stimulus:ev_dispatch' => 'Dispatch to a team~~',
+	'Class:Incident/Attribute:status/Value:dispatched' => 'Předáno',
+	'Class:Incident/Attribute:status/Value:redispatched' => 'Znovu předáno',
+	'Class:Incident/Stimulus:ev_dispatch' => 'Předat týmu',
 	// Menu entry
-	'Menu:Incident:IncidentsDispatchedToMyTeams' => 'Incidents dispatched to my teams~~',	
-	'Menu:Incident:IncidentsDispatchedToMyTeams+' => 'Open incidents dispatched to one of my teams~~',	
+	'Menu:Incident:IncidentsDispatchedToMyTeams' => 'Incidenty předané mému týmu',	
+	'Menu:Incident:IncidentsDispatchedToMyTeams+' => 'Otevřené incidenty předáné v rámci jednoho z mých týmů',	
 ));
