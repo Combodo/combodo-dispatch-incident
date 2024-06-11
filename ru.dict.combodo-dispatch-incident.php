@@ -2,17 +2,18 @@
 /**
  * Localized data
  *
- * @author      Vladimir Kunin <v.b.kunin@gmail.com>
- * @link        http://community.itop-itsm.ru  iTop Russian Community
- * @link        https://github.com/itop-itsm-ru/itop-rus
- * @license     http://www.opensource.org/licenses/gpl-3.0.html LGPL
+ * @copyright Copyright (C) 2010-2024 Combodo SAS
+ * @license    https://opensource.org/licenses/AGPL-3.0
+ * 
  */
-Dict::Add('RU RU', 'Russian', 'Русский', array(
-	// Dictionary entries go here
+/**
+ * @author Vladimir Kunin <v.b.kunin@gmail.com>
+ *
+ */
+Dict::Add('RU RU', 'Russian', 'Русский', [
 	'Class:Incident/Attribute:status/Value:dispatched' => 'Направлен',
 	'Class:Incident/Attribute:status/Value:redispatched' => 'Перенаправлен',
 	'Class:Incident/Stimulus:ev_dispatch' => 'Направить в команду',
-	// Menu entry
-	'Menu:Incident:IncidentsDispatchedToMyTeams' => 'Направленные в мои команды',	
-	'Menu:Incident:IncidentsDispatchedToMyTeams+' => 'Открытые инциденты, направленные в мои команды',	
-));
+	'Menu:Incident:IncidentsDispatchedToMyTeams' => 'Направленные в мои команды',
+	'Menu:Incident:IncidentsDispatchedToMyTeams+' => 'Открытые инциденты, направленные в мои команды',
+]);

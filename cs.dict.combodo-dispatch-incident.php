@@ -2,15 +2,17 @@
 /**
  * Localized data
  *
- * @copyright   Copyright (C) 2013 Combodo SARL
- * @license     http://opensource.org/licenses/AGPL-3.0
+ * @copyright Copyright (C) 2010-2024 Combodo SAS
+ * @license    https://opensource.org/licenses/AGPL-3.0
+ * 
  */
-Dict::Add('CS CZ', 'Czech', 'Čeština', array(
-	// Dictionary entries go here
+/**
+ *
+ */
+Dict::Add('CS CZ', 'Czech', 'Čeština', [
 	'Class:Incident/Attribute:status/Value:dispatched' => 'Předáno',
 	'Class:Incident/Attribute:status/Value:redispatched' => 'Znovu předáno',
 	'Class:Incident/Stimulus:ev_dispatch' => 'Předat týmu',
-	// Menu entry
-	'Menu:Incident:IncidentsDispatchedToMyTeams' => 'Incidenty předané mému týmu',	
-	'Menu:Incident:IncidentsDispatchedToMyTeams+' => 'Otevřené incidenty předáné v rámci jednoho z mých týmů',	
-));
+	'Menu:Incident:IncidentsDispatchedToMyTeams' => 'Incidenty předané mému týmu',
+	'Menu:Incident:IncidentsDispatchedToMyTeams+' => 'Otevřené incidenty předáné v rámci jednoho z mých týmů',
+]);
