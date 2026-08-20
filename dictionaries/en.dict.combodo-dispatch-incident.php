@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Localized data
  *
@@ -6,12 +7,12 @@
  * @license     http://opensource.org/licenses/AGPL-3.0
  */
 
-Dict::Add('EN US', 'English', 'English', array(
+Dict::Add('EN US', 'English', 'English', [
 	// Dictionary entries go here
 	'Class:Incident/Attribute:status/Value:dispatched' => 'Dispatched',
 	'Class:Incident/Attribute:status/Value:redispatched' => 'Redispatched',
 	'Class:Incident/Stimulus:ev_dispatch' => 'Dispatch to a team',
 	// Menu entry
-	'Menu:Incident:IncidentsDispatchedToMyTeams' => 'Dispatched to my teams',	
-	'Menu:Incident:IncidentsDispatchedToMyTeams+' => 'Open incidents dispatched to one of my teams',	
-));
+	'Menu:Incident:IncidentsDispatchedToMyTeams' => 'Dispatched to my teams',
+	'Menu:Incident:IncidentsDispatchedToMyTeams+' => 'Open incidents dispatched to one of my teams',
+]);
