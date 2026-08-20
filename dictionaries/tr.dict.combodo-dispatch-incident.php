@@ -13,6 +13,6 @@ Dict::Add('TR TR', 'Turkish', 'Türkçe', [
 	'Class:Incident/Attribute:status/Value:dispatched' => 'Dispatched~~',
 	'Class:Incident/Attribute:status/Value:redispatched' => 'Redispatched~~',
 	'Class:Incident/Stimulus:ev_dispatch' => 'Dispatch to a team~~',
-	'Menu:Incident:IncidentsDispatchedToMyTeams' => 'Incidents dispatched to my teams~~',
+	'Menu:Incident:IncidentsDispatchedToMyTeams' => 'Dispatched to my teams~~',
 	'Menu:Incident:IncidentsDispatchedToMyTeams+' => 'Open incidents dispatched to one of my teams~~',
 ]);

@@ -12,6 +12,6 @@ Dict::Add('EN GB', 'British English', 'British English', array(
 	'Class:Incident/Attribute:status/Value:redispatched' => 'Redispatched',
 	'Class:Incident/Stimulus:ev_dispatch' => 'Dispatch to a team',
 	// Menu entry
-	'Menu:Incident:IncidentsDispatchedToMyTeams' => 'Incidents dispatched to my teams',
+	'Menu:Incident:IncidentsDispatchedToMyTeams' => 'Dispatched to my teams',
 	'Menu:Incident:IncidentsDispatchedToMyTeams+' => 'Open incidents dispatched to one of my teams',
 ));
